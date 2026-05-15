@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# data & artifacts (large or generated)
+data/raw/
+data/bindingdb/
+data/bindingdb_10k/
+data/synthetic/
+checkpoints/*.pt
+*.tar.gz
+
+# experiment outputs (keep the input fastas/csvs, drop generated results)
+experiments/*_hits.csv
+experiments/screen_results.csv
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
