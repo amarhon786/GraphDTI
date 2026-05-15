@@ -20,11 +20,9 @@ from graphdti.serving.app import load_predictor
 
 
 def main():
-    seq = (
-        "DLTVKIGDFGLATEKSRWSGSHQFEQLSGSILWMAPEVIRMQDKNPYSFQSDVYAFGIVLYELMTGQLPYSNINNRDQII"
-        "FMVGRGYLSPDLSKVRSNCPKAMKRLMAECLKKKRDERPLFPQILASIELLARSLPKIHRSASEPSLNRAGFQTEDFSLY"
-        "ACASPKTPIQAGGYGAFPVH"
-    )
+    # Canonical BRAF V600E kinase domain (UniProt P15056 residues 457-717, V600E mutation)
+    fasta_path = Path("experiments/BRAF_canonical.fasta")
+    seq = "".join(line.strip() for line in fasta_path.read_text().splitlines() if not line.startswith(">"))
     library = pd.read_csv("experiments/natural_products_library.csv")
     ckpt = "checkpoints/dti_real_medium.pt"
 
