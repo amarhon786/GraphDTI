@@ -1,0 +1,36 @@
+name,smiles,class,note
+Metformin,CN(C)C(=N)NC(N)=N,Biguanide,The question — indirect AMPK activator via Complex I inhibition
+Phenformin,N=C(N)NC(=N)NCCc1ccccc1,Biguanide,Older biguanide — similar mechanism but more potent
+Buformin,CCCCNC(=N)NC(N)=N,Biguanide,Another biguanide (withdrawn — lactic acidosis)
+A-769662,O=C(Nc1ccc(O)cc1-c1ccc(C#N)cc1)N1CCC(c2ccccc2)CC1,Direct AMPK activator,Allosteric site (ADaM) — POSITIVE CONTROL
+Compound_991,O=C(Nc1ccc(C(=O)O)cc1Cl)c1cnc2cc(N3CCCC3)ccc2c1,Direct AMPK activator,ADaM site — POSITIVE CONTROL
+MK-8722,O=C(O)Cc1nc2ccc(Cl)cc2c1-c1ccc(C(=O)N2CCC(c3ccccc3)CC2)cc1,Direct AMPK activator,ADaM site (clinical) — POSITIVE CONTROL
+PF-06409577,COc1cc(-c2c3cccc(C(=O)NCCN(C)C)c3oc2C(=O)O)c2c(c1)CCC2,Direct AMPK activator,Beta-1 selective — POSITIVE CONTROL
+Salicylate,O=C(O)c1ccccc1O,Direct AMPK activator,Direct binding at ADaM site (weak)
+Aspirin,CC(=O)OC1=CC=CC=C1C(=O)O,NSAID,Hydrolyzes to salicylate — indirect AMPK activator
+Berberine,COc1ccc2cc3c(cc2c1OC)[n+]1cc4c(cc1CC3)OCO4,Alkaloid,Known indirect AMPK activator
+Resveratrol,Oc1ccc(/C=C/c2cc(O)cc(O)c2)cc1,Polyphenol,Reported SIRT1 activator — controversial
+Quercetin,O=c1c(O)c(-c2ccc(O)c(O)c2)oc2cc(O)cc(O)c12,Flavonoid,SIRT1 / AMPK pathway claims
+EGCG,O[C@@H]1[C@@H](OC(=O)c2cc(O)c(O)c(O)c2)Cc2c(O)cc(O)cc2O1,Polyphenol,Green tea catechin — pathway claims
+Curcumin,COc1cc(/C=C/C(=O)CC(=O)/C=C/c2ccc(O)c(OC)c2)ccc1O,Polyphenol,AMPK pathway claims
+Atorvastatin,CC(C)c1c(C(=O)Nc2ccccc2)c(-c2ccccc2)c(-c2ccc(F)cc2)n1CC[C@@H](O)C[C@@H](O)CC(=O)O,Statin,Some literature claims AMPK activation
+Simvastatin,CCC(C)(C)C(=O)O[C@H]1CC(C)C=C2C=C[C@@H](C)[C@H](CC[C@@H]3C[C@@H](O)CC(=O)O3)[C@@H]12,Statin,Some literature claims AMPK activation
+Rosuvastatin,CC(C)c1nc(N(C)S(C)(=O)=O)nc(-c2ccc(F)cc2)c1/C=C/[C@@H](O)C[C@@H](O)CC(=O)O,Statin,Cardiovascular
+Losartan,CCCCc1nc(Cl)c(CO)n1Cc1ccc(-c2ccccc2-c2nnn[nH]2)cc1,ARB,Hypertension — relevant to TAA biology
+Valsartan,CCCCC(=O)N([C@@H](C(C)C)C(=O)O)Cc1ccc(-c2ccccc2-c2nnn[nH]2)cc1,ARB,Hypertension
+Lisinopril,N[C@@H](CCCCN)C(=O)N1CCC[C@H]1C(=O)O,ACE inhibitor,Hypertension
+Enalapril,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N1CCC[C@H]1C(=O)O,ACE inhibitor,Hypertension
+Propranolol,CC(C)NC[C@H](O)COc1cccc2ccccc12,Beta blocker,Aortic protection in some trials
+Amlodipine,CCOC(=O)C1=C(C)NC(COCCN)=C(C(=O)OC)C1c1ccccc1Cl,CCB,Hypertension
+Sitagliptin,N[C@@H](CC(=O)N1CCn2c(nnc2C(F)(F)F)C1)Cc1cc(F)c(F)cc1F,DPP-4 inhibitor,Diabetes — no AMPK direct role expected
+Glipizide,Cc1ncc(C(=O)NCCc2ccc(S(=O)(=O)NC(=O)NC3CCCCC3)cc2)cn1,Sulfonylurea,Diabetes — different mechanism than metformin
+Empagliflozin,OC[C@H]1OC([C@H](O)[C@@H](O)[C@@H]1O)c1cc(Cc2ccc(O[C@H]3CCOC3)cc2)c(Cl)cc1,SGLT2 inhibitor,Diabetes — cardiovascular benefits
+Pioglitazone,CCc1ccc(CCOc2ccc(CC3SC(=O)NC3=O)cc2)nc1,PPARgamma agonist,Diabetes — PPAR mechanism
+Imatinib,Cc1ccc(NC(=O)c2ccc(CN3CCN(C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1,Kinase inhibitor,Different kinase target — sanity check
+Caffeine,CN1C=NC2=C1C(=O)N(C(=O)N2C)C,Stimulant,Negative control
+Ethanol,CCO,Common,Negative control
+Rapamycin,CO[C@@H]1CC[C@H]2C[C@@H](/C(C)=C/C(=O)[C@@H](OC)C[C@@H](O)CC(=O)[C@](C)(O)[C@H](C)/C=C(\C)[C@H](OC)[C@@H](OC)CC(C)CC(=O)O[C@@H]1[C@H]2C)N1CCCC[C@H]1C(=O)O,Direct mTOR inhibitor,Allosteric FKBP12-mediated mTORC1 inhibitor [+mTOR CTRL]
+Everolimus,CO[C@@H]1CC[C@H]2C[C@@H](/C(C)=C/C(=O)[C@@H](OC)C[C@@H](O)CC(=O)[C@](C)(O)[C@H](C)/C=C(\C)[C@H](OC)[C@@H](OC)CC(C)CC(=O)O[C@@H]1[C@H]2C)N1CCCC[C@H]1C(=O)OCCO,Direct mTOR inhibitor,Rapalog FDA-approved [+mTOR CTRL]
+Torin1,O=C(c1cccc(C(F)(F)F)c1)N1CCN(c2nc3cc(-c4ccc5[nH]c(=O)ccc5c4)ccc3n3c(=O)ccc23)CC1,Direct mTOR inhibitor,ATP-competitive mTOR kinase inhibitor [+mTOR CTRL]
+AZD8055,COc1cnc(-c2nc3c(C)nc(N)nc3n2CC(C)O)nc1OC,Direct mTOR inhibitor,ATP-competitive mTOR kinase inhibitor [+mTOR CTRL]
+Temsirolimus,CO[C@@H]1CC[C@H]2C[C@@H](/C(C)=C/C(=O)[C@@H](OC)C[C@@H](O)CC(=O)[C@](C)(O)[C@H](C)/C=C(\C)[C@H](OC)[C@@H](OC)CC(C)CC(=O)O[C@@H]1[C@H]2C)N1CCCC[C@H]1C(=O)OC(C)(C)C(=O)CO,Direct mTOR inhibitor,Rapalog FDA-approved for RCC [+mTOR CTRL]

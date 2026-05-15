@@ -86,6 +86,52 @@ attributions. For protein sequences we use a windowed occlusion (mask
 contiguous residue spans, measure score delta) — this surfaces residue-level
 binding hypotheses for the medicinal chemist's downstream analysis.
 
+## Interactive UI
+
+A polished Streamlit explorer ships with the project:
+
+```bash
+streamlit run scripts/app_ui.py   # http://127.0.0.1:8501
+```
+
+Tabs:
+- **Predict** — pick a drug + target, get a probability with explanation
+- **Compare** — score 2-6 drugs against one target side-by-side
+- **Screen library** — bulk virtual screening with a ranked CSV output
+- **How it works** — plain-language methods, metrics, and limitations
+
+## Experiments included
+
+The [`experiments/`](experiments/) folder contains real virtual-screening
+runs against canonical UniProt kinase sequences:
+
+- `run_natural_products_screen.py` — 32 natural products vs BRAF V600E.
+  Positive controls (dabrafenib, vemurafenib, sorafenib) correctly rank
+  1, 2, 3. Top natural-product hit: berberine.
+- `run_repurposing_screen.py` — 85 FDA-approved drugs vs EGFR. Demonstrates
+  the model's calibration limits on a saturated target.
+- `run_metformin_AMPK_screen.py` — metformin vs the AMPK/SIRT1/mTOR axis.
+  Confirms metformin's *indirect* mechanism (scores low across all axis
+  proteins), consistent with the textbook Complex I → AMP/ATP pathway.
+- `fetch_canonical_kinases.py` — utility for pulling canonical kinase domain
+  sequences from UniProt REST API and applying point mutations.
+
+## Limitations
+
+This model is a **fast first filter**, not an end-to-end drug discovery tool.
+Specifically, it:
+
+- Operates on **2-D molecular topology only** — does not simulate 3-D binding
+  geometry, pose, or fit
+- Cannot distinguish stereoisomers
+- Cannot distinguish orthosteric vs allosteric binders (rapamycin underscored
+  on mTOR because rapamycin needs FKBP12 first)
+- Is **calibration-noisy** — absolute probabilities are inflated by the 72%
+  positive rate in BindingDB; use rankings, not raw probabilities
+- Is trained predominantly on **classical bilobal kinases** — does not transfer
+  to other folds (GHKL ATPase kinases like BCKDK, for example)
+- Is meant to feed **into** 3-D docking (AutoDock Vina, DiffDock), not replace it
+
 ## Development
 
 ```bash
@@ -93,3 +139,8 @@ pip install -e ".[dev]"
 pytest -q
 ruff check src tests
 ```
+
+## License
+
+[MIT](LICENSE) — free to use, modify, distribute, including commercially. Just
+keep the copyright notice.
